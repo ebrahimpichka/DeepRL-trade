@@ -21,9 +21,11 @@ We present two trading agents based on deep reinforcement learning, one using Pr
 
 Two deep RL agents are trained using google stock data **(GOOG)** from **01-01-2014** to **01-08-2022**. **Proximal Policy Optimization (PPO)** and **Deep Q-Learning (DQL)**.
 
-The stable-baselines3 implementations where used for both agents. Both PPO and DQL use Discrete action spaces (1 for complete **Long** position, 0 for complete **Cash** position, and -1 for **Short** position equal to the agent's current asset values).
+The stable-baselines3 implementations where used for both agents. Both `ppo_agent` (PPO) and `dqn_agent` (DQL) use Discrete action spaces (1 for complete **Long** position, 0 for complete **Cash** position, and -1 for **Short** position equal to the agent's current asset values).
 
 The trading environments are implemented with the OpenAI gym interface for the agents to interact with. In this environment, agent moves to the beginning of the next trading day by taking an action (1, 0, or -1) at each timestep (day), and recieves a reward equal to the percentage of its total asset value change.
+
+** All the details are laid out in the `DeepRL-trader.ipynb` notebook file.
 
 ---
 
